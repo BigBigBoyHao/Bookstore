@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>欢迎来到花花❀书店</title>
+		<script src="jquery-3.4.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#setting").click(function(){
+					var name = $("#name").val();
+					var role = $("#role").val();
+					var passwd = $("#passwd").val();
+					if(name==null||role==null||passwd==null)
+					{
+						alert("请输入正确的信息！");
+						window.navigate(location)
+					}
+					alert("欢迎光临："+name+"!")
+					if(role =="assist")
+						window.open("homepage.html")
+					else
+						window.open("managerhomepage.html")
+				});
+			});
+			
+		
+		
+		</script>
+		<link href="./denglu.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="wapper">
+				<div class="heading">
+					<div class="heading_nav">
+						<div class="heading_title">
+							花花书店管理系统
+						</div>
+						<div class="heading_img">
+							<img src="timg.jfif">
+						</div>
+						<div class="heading_soptlight">
+							<form>
+								<input type="text" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="body">
+					<div class="body_title">
+						<h3>花花书店管理系统</h3>
+						<p>让书店的各项数据变得清晰明朗，让店长不再发愁！</p>
+					</div>
+					<hr />
+					<div class="form_div">
+						<form name="name_frm">
+							<h2>请先登录</h2>
+							<br />
+							请选择身份：
+							<select id="role">
+								<option value="null">-</option>
+								<option value="assist">店员</option>
+								<option value="manager">管理员</option>
+							</select>
+							<br />
+							<input type="text" id="name" placeholder="请输入用户名" value=""/>
+							<br />
+							<input type="password" id="paswd" placeholder="请输入密码" />
+							<br />
+							<button id="setting">提交</button>
+							<button id="regrit">注册</button>
+							<br />
+							<small>若未注册，点击注册按钮即可完成注册</small>
+						</form>
+						
+						
+					</div>
+					<hr />
+					<div class="ahead_content">
+						<div>
+							<h4>登录后，你或将实现以下几个功能：</h4>
+						</div>
+						<div class="ahead_body">
+							<div class="ahead_body_content">
+								<p>销售书籍</p>
+								<small>(店员)</small>
+							</div>
+							<div class="ahead_body_content">
+								<p>书籍管理</p>
+								<small>(管理员)</small>
+							</div>
+							<div class="ahead_body_content">
+								<p>用户管理</p>
+								<small>(管理员)</small>
+							</div>
+							<div class="ahead_body_content">
+								<p>记录查询</p>
+								<small>(管理员)</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footing">
+				@花花书店管理系统
+			</div>
+		</div>
+	</body>
+</html>
